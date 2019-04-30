@@ -1,0 +1,83 @@
+ body {
+     margin: 0%;
+     padding: 0%;
+     text-align: center;
+     background: #ffffff;  /* fallback for old browsers */
+     background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+     background: linear-gradient(to right, #FFFFFF, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ }
+
+ input[type="email"], input[type="password"],
+ input[type="text"], input[type="date"], input[type="select"] {
+     outline: none;
+     padding: 20px;
+     display: block;
+     width: 300px;
+     border-radius: 3px;
+     border: 1px solid #9fcdff;
+     margin: 20px auto;
+ }
+ input[type="text"]{
+     float: left;
+     
+ }
+
+ input[type="email"],input[type="password"]{
+     float:right;
+ }
+
+    input[type="submit"] {
+     padding: 10px;
+     color: #ffffff;
+     background: #3783f4;
+     width: 320px;
+     margin: 20px auto;
+     margin-top: 0%;
+     border: 10px;
+     border-radius: 3px;
+     cursor: pointer;
+ }
+
+ input[type="submit"]:hover {
+     background-color: #0d40ee;
+ }
+ input[type="button"]:hover{
+     background-color: #0c5460;
+ }
+
+
+ header,h1{
+     border-bottom: 2px solid #eeeeee;
+     padding: 20px 0;
+     margin-bottom: 10px;
+     width: 100%;
+     text-align: center;
+ }
+
+ header a {
+     text-decoration: none;
+     color: #000033;
+
+ }
+
+ .selecionar{
+     display: flow-root;
+     text-align: center;
+     font-size: 14px;
+     font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+ }
+
+ .imagen_Index{
+     margin: 100px auto;
+     display: compact;
+     text-align: center;
+     border: solid #1c92d2;
+     border-radius: 25px 25px;
+ }
+
+ a{
+     position:center;
+    text-align: center;
+    text-decoration: none;
+
+ }

@@ -1,0 +1,76 @@
+
+
+#tarjeta_1{
+    background: #005cbf;
+    border-radius: 15px;
+    border: 1px solid #FFFFFF;
+    align-self: center;
+    color: #FFFFFF;
+}
+#tarjeta_2{
+    background: #34b5ff;
+    border: 1px  solid #FFFFFF;
+    border-radius: 15px;
+    color: #FFFFFF;
+}
+
+#tarjeta_3{
+    background: #0097ff;
+    border: 1px  solid #FFFFFF;
+    border-radius: 15px;
+    height: 350px;
+    color: #FFFFFF;
+
+
+}
+
+#tarjeta_5{
+    background: #819dff;
+    border: 1px  solid #FFFFFF;
+    border-radius: 15px;
+    color: #FFFFFF;
+
+}
+
+#tarjeta_6{
+    background: #005cbf;
+    border: 1px  solid #FFFFFF;
+    border-radius: 15px;
+    color: #FFFFFF;
+
+}
+
+#tarjeta_ambicion{
+    background: rgba(204,0,153,0.97);
+    border: 1px  solid #FFFFFF;
+    border-radius: 25px;
+    text-align: justify;
+    color: #FFFFFF;
+    left: 550px;
+    height: 400px;
+    width: 350px;
+}
+
+#tarjeta_compromiso{
+    background: #C6E377;
+    border: 1px  solid #FFFFFF;
+    border-radius: 25px;
+    text-align: justify;
+    color: #FFFFFF;
+    left: 550px;
+    height: 400px;
+    width: 350px;
+
+}
+
+#tarjeta_sencillez{
+    background: #34b5ff;
+    border: 1px  solid #FFFFFF;
+    border-radius: 25px;
+    text-align: justify;
+    color: #FFFFFF;
+    left: 550px;
+    height: 400px;
+    width: 350px;
+
+}

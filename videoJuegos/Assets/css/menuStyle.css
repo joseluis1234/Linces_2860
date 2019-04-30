@@ -1,0 +1,120 @@
+body {
+    margin: 0%;
+    padding: 0%;
+    text-align: center;
+    background: #abbaab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffffff, #ffffff);
+}
+
+nav h1 {
+    margin: 0;
+    display: block;
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-align: center;
+}
+
+header {
+    width: auto;
+    height: 300px;
+    background: #005cbf;
+    background-image: url("../../img/h.jpg");
+    background-repeat:round;
+    backface-visibility: hidden;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+}
+
+#btn-menu {
+    display: none;
+}
+
+#BarraNav,#Origen,#Marcas,#Somos,#Valores{
+    background-color: #005cbf;
+}
+
+header label {
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-right: 1px solid #ffffff;
+}
+
+header label:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.menu ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+}
+
+.menu li:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.menu li a {
+    display: block;
+    padding: 15px 20px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+@media(max-width:768px) {
+    header label {
+        display: block;
+    }
+    .menu {
+        position: absolute;
+        background: #4e94ab;
+        width: 70%;
+        margin-left: -70%;
+        transition: all 0.5s;
+    }
+    .menu ul {
+        flex-direction: column;
+    }
+    .menu li {
+        border-top: 1px solid #ffffff;
+    }
+    #btn-menu:checked~.menu {
+        margin: 0;
+    }
+}
+
+footer {
+    margin: 0;
+    background: #FFFFFF;
+    padding-bottom: 35px;
+}
+
+.pie_pagina ul {
+    margin: 0;
+    list-style: none;
+    padding: 2px;
+    display: flex;
+}
+
+.pie_pagina li {
+    list-style: none;
+    border-right:1px solid #ffffff;
+    color: #ffffff;
+}
+
+.pie_pagina li a {
+    display: block;
+    padding: 20px 25px;
+    color: #ffffff;
+    text-decoration: none;
+}
