@@ -2,9 +2,8 @@
      margin: 0%;
      padding: 0%;
      text-align: center;
-     background: #ffffff;  /* fallback for old browsers */
-     background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
-     background: linear-gradient(to right, #FFFFFF, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+     background-image: url("../../img/mario.jpg");
+
  }
 
  input[type="email"], input[type="password"],

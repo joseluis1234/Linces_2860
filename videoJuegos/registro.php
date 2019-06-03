@@ -91,13 +91,13 @@ $register   -> registroUserController();
                 </div>
 
 
-                <div class="md-form ml-xl-5">
+                <!--<div class="md-form ml-xl-5">
                     <label for="EmpPass" class="col-form-label-lg">Nivel</label>
 
                     <input type="text" class="form-control w3-half" name="nivelUser"
                            placeholder="Ingrese su rfc"
                            id="EmpPass" maxlength="10">
-                </div>
+                </div>-->
 
                 <br><br>
                 <div class="form-check-inline col-md-12">

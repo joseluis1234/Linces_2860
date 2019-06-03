@@ -1,3 +1,10 @@
+<?php
+session_start();
+require_once "Models/Crud.php";
+require_once "Controllers/Controller.php";
+$login  =new MvcController();
+$login  -> ingresoUserController();
+?>
 <!doctype html>
 <html lang="es">
 <head>
@@ -25,11 +32,10 @@
         Sesión</a>
 </div>
 <div class="col-lg-1 float-lg-right">
-    <a href="" class="btn btn-warning btn-rounded mb-4" data-toggle="modal"
-       data-target="#registerModal">Registro</a>
+    <a href="registro.php" class="btn btn-warning btn-rounded mb-4">Registro</a>
 </div>
 
-<div class="modal fade modal-open" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+<!--<div class="modal fade modal-open" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
      aria-hidden="true">l
 
     <div class="modal-dialog" role="document">
@@ -42,35 +48,11 @@
             </div>
 
 
-            <div class="modal-body mx-sm-5" id="divLogin">
-                <form name="Login" id="Login" method="POST" onsubmit="return validarRegistro()" class="form-row">
-                    <div class="md-form ml-xl-5">
-                        <label for="NoEmp" class="col-form-label-lg">Correo <span></span></label>
-                        <br>
-                        <input type="text" name="numUser" placeholder="Ingrese su número de empleado" id="NoEmp"
-                               class="form-control w3-half" maxlength="6" for="idUser">
-                    </div>
 
-                    <div class="md-form ml-xl-5">
-                        <label for="EmpPass" class="col-form-label-lg">Contraseña</label>
-
-                        <input type="text" class="form-control w3-half" name="passwordAccess"
-                               placeholder="Ingrese su rfc"
-                               id="EmpPass" maxlength="10">
-                    </div>
-
-                    <br>
-                    <div class="mxl-form col-md-12">
-                        <button type="submit" class="btn-lg btn-primary" value="Enviar" id="btnLogin">
-                            Iniciar
-                        </button>
-                    </div>
-                </form>
-            </div>
 
         </div>
     </div>
-</div>
+</div>-->
 
 <div class="modal fade modal-open" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
      aria-hidden="true">
@@ -90,23 +72,25 @@
                     <div class="md-form ml-xl-5">
                         <label for="NoEmp" class="col-form-label-lg">Correo <span></span></label>
                         <br>
-                        <input type="text" name="numUser" placeholder="Ingrese su número de empleado" id="NoEmp"
-                               class="form-control w3-half" maxlength="6" for="idUser">
+                        <input type="text" name="emailUser" placeholder="Ingrese su correo" id="NoEmp"
+                               class="form-control w3-half" for="idUser">
                     </div>
 
                     <div class="md-form ml-xl-5">
                         <label for="EmpPass" class="col-form-label-lg">Contraseña</label>
 
                         <input type="text" class="form-control w3-half" name="passwordAccess"
-                               placeholder="Ingrese su rfc"
-                               id="EmpPass" maxlength="10">
+                               placeholder="Ingrese su Contraseña"
+                               id="EmpPass">
                     </div>
 
                     <br>
-                    <div class="mxl-form col-md-12">
-                        <button type="submit" class="btn-lg btn-primary" value="Enviar" id="btnLogin">
-                            Iniciar
-                        </button>
+                    <div class="form-check-inline">
+                        <div class="col-md-7 py-5">
+                            <button type="submit" class="btn-lg btn-primary" value="Enviar" id="btnLogin">
+                                Iniciar
+                            </button>
+                        </div>
                     </div>
                 </form>
             </div>

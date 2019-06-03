@@ -8,6 +8,7 @@ body {
 
 }
 
+/*
 input[type="email"], input[type="password"],
 input[type="text"], input[type="date"], input[type="select"] {
     outline: none;
@@ -114,3 +115,4 @@ a{
     text-decoration: none;
 
 }
+ /*

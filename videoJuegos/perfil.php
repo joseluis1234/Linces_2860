@@ -1,3 +1,17 @@
+<?php
+session_start();
+require_once "Controllers/Controller.php";
+require_once "Models/Crud.php";
+$infoUser   =   new  MvcController();
+if (!isset($_SESSION['user'])){
+    header("location: index.php");
+}
+$idUser =   $_SESSION['user'];
+$arregloInfo    =   array();
+$infoUser   -> infoPerfilUser($idUser);
+$arregloInfo = $infoUser->infoPerfilUser($idUser);
+
+?>
 <!doctype html>
 <html lang="es">
 <head>
@@ -64,12 +78,7 @@
                                                 </button>-->
                                             </div>
                                         </div>
-                                        <div class="text-center text-sm-right">
-                                            <span class="badge badge-secondary">administrator</span>
-                                            <div class="text-muted">
-                                                <small>Se unió el <?php echo $arregloInfo[6] ?></small>
-                                            </div>
-                                        </div>
+
                                     </div>
                                 </div>
                                 <ul class="nav nav-tabs">
@@ -93,7 +102,7 @@
 
                                                         <div class="col">
                                                             <div class="form-group col-md-12">
-                                                                <label>No. Empleado</label>
+                                                                <label>No. de Usuario</label>
                                                                 <input class="form-control" type="text"
                                                                        name="numUserProfile"
                                                                        placeholder="No. empleado"
@@ -102,37 +111,17 @@
                                                             </div>
                                                         </div>
 
-                                                        <div class="form-group">
-                                                            <div class="form-group col-lg-11">
-                                                                <label>Curp</label>
-                                                                <input class="form-control" type="text"
-                                                                       name="curpUserProfile"
-                                                                       placeholder="Curp"
-                                                                       value="<?php echo $arregloInfo[5] ?>"
-                                                                       required id="idCurp">
-                                                            </div>
-                                                        </div>
                                                     </div>
+
+
                                                     <div class="row">
                                                         <div class="col">
                                                             <div class="form-group">
-                                                                <label>Empresa</label>
-                                                                <input class="form-control" type="text"
-                                                                       name="enterpriseUserProfile"
-                                                                       placeholder="Empresa"
-                                                                       value="<?php echo $arregloInfo[12] ?>"
-                                                                       id="idEnter">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <div class="form-group">
-                                                                <label>Fecha de Ingreso</label>
+                                                                <label>Fecha de Nacimiento</label>
                                                                 <input class="form-control" type="text"
                                                                        name="fechaIngreso"
                                                                        placeholder="Fecha de ingreso"
-                                                                       value="<?php echo $arregloInfo[6] ?>"
+                                                                       value="<?php echo $arregloInfo[4] ?>"
                                                                        id="idDate">
                                                             </div>
                                                         </div>
@@ -144,7 +133,7 @@
                                                                 <input class="form-control" type="text"
                                                                        placeholder="user@example.com"
                                                                        name="emailProfile" value="<?php
-                                                                echo $arregloInfo[11] ?>" id="idEmail">
+                                                                echo $arregloInfo[5] ?>" id="idEmail">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -168,7 +157,7 @@
                                                             <div class="form-group">
                                                                 <label>Contraseña Actual</label>
                                                                 <input class="form-control" type="text" placeholder=""
-                                                                       value="<?php echo $arregloInfo[7] ?>"
+                                                                       value="<?php echo $arregloInfo[6] ?>"
                                                                        name="actualPass" id="idCurrentPass">
                                                             </div>
                                                         </div>
@@ -222,13 +211,6 @@
                                             </div>
                                             <div class="row">
                                                 <div class="w3-bar ">
-
-                                                    <button type="button" class="btn-lg btn-dark" value="Editar"
-                                                            id="btnLogin"
-                                                            onclick="inputsDisable()">
-                                                        Editar
-                                                    </button>
-
 
                                                     <button type="submit" class="btn-lg btn-primary" value="Enviar"
                                                             id="btnLogin"
